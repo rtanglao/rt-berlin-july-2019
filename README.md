@@ -5,6 +5,8 @@ make an infographic from my photos of berlin july 19-26, 2019
 ```bash
 mkdir 150x150
 cd 150x150
+# set id is: 72157709917594396 which comes from the album url:
+# https://www.flickr.com/photos/roland/albums/72157709917594396
 ./get-thumbnail-150-berlin-2019.rb 72157709917594396 2>/tmp/log.txt >berlin2019-url-150x150.txt
 cat ../berlin2019-url-150x150.txt  | ../backup150x150.rb
 # 2100/150 = 14, 1800.150 = 12, 12* 14 = 168
