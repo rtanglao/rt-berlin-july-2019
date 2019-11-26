@@ -13,4 +13,5 @@ mkdir CIRCULAR
 cat rt-berlin-july2019-168files.txt | parallel magick '{}' -vignette 0x0+0+0 'CIRCULAR/{}'
 cd CIRCULAR
 ls -1 *.jpg > 168jpgs.txt
+montage -verbose -adjoin -tile 12x14 +frame +shadow +label -adjoin -geometry '150x150+0+0<' @168jpgs.txt rt-berlin-12-14-150x150.jpg
 ```
