@@ -5,10 +5,10 @@ make an infographic from my photos of berlin july 19-26, 2019
 
 ```bash
 mkdir 75x75
-cd 75x75
 # set id is: 72157709917594396 which comes from the album url:
 # https://www.flickr.com/photos/roland/albums/72157709917594396
 ./get-thumbnail-75-berlin-2019.rb 72157709917594396 2>/tmp/log.txt >berlin2019-url-75x75.txt
+cd 75x75
 cat ../berlin2019-url-75x75.txt  | ../backup75x75.rb
 # 2100/75 = 28, 1800/75 = 24, 24 * 28 = 672
 find . -type f | shuf -n672 > rt-berlin-july2019-672files.txt 
