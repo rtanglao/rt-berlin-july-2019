@@ -15,7 +15,7 @@ find . -type f | shuf -n672 > rt-berlin-july2019-672files.txt
 mkdir CIRCULAR
 cat rt-berlin-july2019-672files.txt | parallel magick '{}' -vignette 0x0+0+0 'CIRCULAR/{}'
 cd CIRCULAR
-ls -1 *.jpg > 672jpgs.txt
+ls -1tr *.jpg > 672jpgs.txt
 montage -verbose -adjoin -tile 24x28 +frame +shadow +label -adjoin -geometry '75x75+0+0<' @672jpgs.txt rt-berlin-12-14-75x75.jpg
 ```
 ## November 25, 2019
